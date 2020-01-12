@@ -2,6 +2,7 @@
 // the formats so that if you enter HEX color 
 // format it returns RGB and if you enter RGB color format it returns HEX.
 
+
 convertToRGB("#f4e3d8");
 // Your color is RGB(244, 227, 216)
 
