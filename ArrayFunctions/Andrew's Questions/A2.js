@@ -4,10 +4,13 @@ For example: answer([1,2,3], 4)should return [1,3]*/
 
 function arraySum(arr, target) {
   arr.forEach(function(num, i) {
+    debugger; //debugger helps to watch num, j and i.
     for (let j = 1; j <= arr.length; j++) {
       // check each element and iterate over the rest to find out if their sum is the target
       // j is 1, we don't want to sum each element with themselves
       if (arr[i] + arr[i + j] === target) {
+        //arr[i + j] is out of range sometimes; for example: when num=7, i=6, i + j starts from 7 to 15. 
+        //For Javascript, your code works well, however, as far as I know, in Python, it would be an error. 
         // create a new array and put correct elements into that
         let arr2 = [arr[i], arr[i + j]];
         console.log(arr2);
